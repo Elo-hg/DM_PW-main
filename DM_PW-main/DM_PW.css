@@ -1,0 +1,298 @@
+*{
+    margin: 2;
+    padding: 4;
+    box-sizing: border-box; 
+    
+}
+section {
+    background-color:#009688;
+	display:flex;
+    flex-direction: row;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #0aa9be!important;/*couleur de la page de font*/
+    color: whitesmoke;
+    text-align: center;
+    line-height: 2.5;
+}
+
+header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background-color: rgb(251, 184, 28);
+    color: whitesmoke;
+    text-align:center;
+    padding: 4px;   
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+}
+
+a {
+    color: black;/*la couleur des liens en noir */
+    text-decoration: none;  /* Enlève le soulignement */
+}
+a:hover {
+    color: black;        /* Garde la couleur noire au survol */
+    text-decoration: none;  /* Enlève le soulignement au survol */
+}
+  
+header img {
+    float: left;/*alignement à gauche */
+    margin-right: 20px; /* Espace entre l'image et le texte à droite*/
+    margin-left: 20px; /*l'espace entre l'image et le texte à gauche*/
+    width: 100px; /* Ajuste la taille de l'image */
+    height: auto; /* Garde les proportions de l'image */
+    display: flex;
+    align-items: center; /* Aligne verticalement l'image et le texte */
+}
+
+h1 {
+    color:white;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-bottom: 20px;  /* Ajoute un espace en bas du h2 */
+    font-family: 'Times New Roman', Times, serif; /*police de caractère*/
+}
+  
+h3 {
+    margin-top: 80px;     /* Ajoute un espace en haut du h3 */
+}
+
+p {
+    text-align: justify; /*alignement*/
+    font-family: 'Times New Roman', Times, serif /*police de caractère*/
+}
+  
+main {
+  padding:20px;/*espacement interieur d'element*/
+}
+select{
+    margin-left: 10px;
+}
+
+input[type="radio"]{
+    margin-right :10px;
+}
+
+textarea{
+    width: 1350px;
+    height: 300px ;
+}
+/*boite des exercices*/
+.box {
+    background-color: #3fc7cb; /* couleur Fond */
+    border: 2px solid #ffae00; /* couleur Bordure */
+    padding: 20px;
+    margin: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+	float: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.back-home{
+    font-size: 12px; /*taille de "Retour à l'Accueil*/
+    font-weight: bold; /*text en gras*/
+}
+
+.activities {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.activiy-list{
+    display: flex; /*affiche les elements en ligne*/
+    flex-wrap: wrap; /* les boutons peuvent se réorganiser si necessaire*/
+    justify-content: center; /* centre les boutons à l'horizontal*/
+    gap: 70px; /*espacement entre les boutons */
+    margin-top: 20px; /*marge au dessus de container*/
+}
+
+.activity-btn {
+    background-color:#a5d6f8; /*couleur de fond*/
+    color: black; /*couleur écriture*/
+    font-size: 12px; /*taille de police*/
+    border-radius: 5px; /*coin arrondis*/
+    gap: 40px;
+}
+.activity-btn:hover{
+    background-color:#019b8c; /*couleur quand la souris passe sur les boutons */
+}
+.footer{
+    position: fixed;
+    bottom: 0; /* postion de footer en bas de la page*/
+    left: 0;
+    width: 100%; /* prend toute la largeur*/
+    text-align: center; /* texte au centre*/
+    background-color:#05a4b9;/*couleur du fond*/
+    color: whitesmoke; /* couleur du texte*/
+    padding: 10px 0; /* espacement du texte*/
+    z-index: 1000;/* assure que le footer reste au dessus du contenu*/
+}
+/* Style des boutons de bonne ou mauvaise réponse */
+.check-btn{
+    background-color:#a5d6f8; /*couleur de fond*/
+    color: black; /*couleur écriture*/
+    font-size: 12px; /*taille de police*/
+    border-radius: 5px; /*coin arrondis*/
+    cursor: pointer;
+}
+.check-btn:hover{
+    background-color: #009688;
+}
+
+/*les boutons à cliquer*/
+button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Drag and drop colonne gauche*/
+.left-column {
+    float: left;
+    width: 70%;
+}
+
+/*drag and drop colonne droite*/
+.right-column {
+    float: left;
+    width: 30%;
+    margin-left: 20px;
+}
+
+/* drag and drop pour drag*/
+.draggable {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #fff700;
+    background-color: #a5d6f8;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.check-btn:hover{
+    background-color: #009688;
+}
+
+/* style du resultat*/
+#results { 
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+div#zdrag {
+	width: 40%;
+	background-color: rgb(240, 228, 209);
+	color: black;
+	height: 80%;
+	padding-left : 20px;
+	
+}
+div#zdrop {
+	width:40%;
+    background-color: rgb(253, 222, 169);
+	color: black;
+	height: 80%;
+	padding-left : 20px;
+}
+div#zone{
+    background-color: #3fc7cb; /* couleur Fond*/
+    border: 2px solid #ffae00; /* couleur bordure*/
+    border-radius: 10px;
+    margin: 20px;
+    margin-bottom: 20px;
+    box-shadow:0 4px 6px rgba(0, 0, 0, 0.1);
+	display: flex;
+	justify-content: space-around;
+	align-items:center;
+	margin-top : 50px;
+	height: 1100px;
+	width: 97%;
+}
+.dep {
+	font-family: comic sans ms;
+	width: 400px;
+	font-size: 1.1em; 
+	color: rgb(255, 0, 132);
+    cursor: move;
+    float: center;
+	 margin-left: auto;
+  margin-right: auto;
+
+}
+
+.rep {
+    margin: 4px;
+    padding: 2px;
+    width: 400px;
+    float: center;
+    border: #a5d6f8 solid;
+    border-radius: 5px;
+    font-family: comic sans ms;
+    font-size: 1.1em; 
+    color: blueviolet;
+	 margin-left: auto;
+  margin-right: auto;
+}
+#dragg{
+    margin: 2px;
+    float: left;
+    border: #a5d6f8 solid;
+    border-radius: 5px;
+    font-family: comic sans ms;
+    font-size: 1.1em; 
+    color: blueviolet
+
+}
+
+.list{
+    margin-left: 10px;
+    text-align: left;
+}
+body.list{
+    text-align: left; /* pour changer l'alignement seulement dans les listes*/
+}
+
+.checkbox{
+    margin-left: 10px;
+    text-align: left;
+}
+
+body.checkbox{
+    text-align: left; /* pour changer l'alignement seulement dans les checkbox*/
+}
+
+img{
+    width: 100%; /*mettre l'image a la taille du site web*/
+}
+#sortable{
+    list-style-type: none;  
+}
+.box-comp{
+background-color:#009688;
+margin:20px 0;
+padding: 20px;
+border: 2px solid #a5d6f8;
+margin-bottom: 20px;
+border-radius: 10px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+.box-comp:hover{
+    background-color: #019b8c;
+    cursor:pointer
+}

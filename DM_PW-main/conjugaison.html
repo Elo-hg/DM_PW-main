@@ -1,0 +1,89 @@
+<!DOCTYPE html> <!-- indique aux navigateurs web que le document est une page web-->
+<html lang="fr"> <!-- langue française-->
+    <head> <!-- balise contenant les métadonnêes du site-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title> Plateforme de Révision des Fondamentaux - Niveau Primaire CM2 </title> <!--définit le texte affiché sur l'onglet du navigateur web lors de la visite de la page-->
+        <link rel="stylesheet" href="DM_PW.css"/>    
+        <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+		<script type="text/javascript" src="DM_PW.js" ></script>
+    </head>
+    <body> <!--contient le contenu visible de la page web-->
+        <header> <!--contient le contenu d'introduction ou de navigation-->
+            <img src="cm2image.jpg" alt="CM2">
+             <div class="center-text"> <!--div = definit une section dans un document html-->
+                 Le Français Niveau CM2 
+                <div class="center-text">
+                  Révisez vos connaissances en lexique, conjugaison, grammaire et encore plus!
+             </div>
+                <selection class="activities">
+                  <div class="activity-list"> <!--chaque bouton déclanche une action quand on clic dessus-->
+                     <button class="activity-btn" id="lexique"><a href="lexique.html">Lexique</a></button> 
+                     <button class="activity-btn" id="conjugaison"><a href="conjugaison.html">Conjugaison</a></button>
+                     <button class="activity-btn" id="grammaire"><a href="grammaire.html">Grammaire</a></button>
+                     <button class="activity-btn" id="orthographe"><a href="orthographe.html">Orthographe</a></button>
+                     <button class="activity-btn" id="comprehension"><a href="comprehension.html">Compréhension de texte</a></button>
+                     <button class="activity-btn" id="Bilan"><a href="Bilan.html">Bilan</a></button>
+                 </div>
+              </selection> 
+             <div class="back-home">  <!--click sur retour à la page mère (index)-->
+                 <a href="DM_PW.html">Retour à l'Accueil</a>
+             </div> 
+         </div>
+        </header>
+        <h2>Exercice de conjugaison
+         <p> Afin de tester tes notions en conjugaison, selectionne les réponses qui correspondent : </p>
+        </h2>
+        <div class="box"> 
+            <p>Exercice 1: Verbes à l'infinitif</p>
+            <p>Trouve la bonne réponse dans la liste et écris la dans la case vide</p>
+            <p>a.Ninon n'arrive pas à <input id="conj1a" type="text"> ce problème</p>
+            <div class="list"</div>
+                <ul>
+                 <li value="danser">danser</li>
+                 <li value="parlerai">parlerai</li>
+                 <li value="résoudre">résoudre</li>
+                </ul>
+            </div>
+            <p>b.<input id="conj1b" type="text">, me fatigue trop maintenant</p>
+            <div class="list">
+                <ul>
+                 <li value="marcher">marcher</li>
+                 <li value="parlerez">parlerez</li>
+                 <li value="résoudait">résoudait</li>
+                </ul>
+            </div>
+            <p>c.Va <input id="conj1c" type="text"> dans le jardin</p> 
+            <div class="list">
+                <ul>
+                 <li value="cherchez">cherchez</li>
+                 <li value="jouer">jouer</li>
+                 <li value="résoudons">résoudons</li>
+               </ul>
+            </div>
+        </div>       
+        <!-- Exercice 2 -->
+        <div class="box"> 
+         <p>Exercice 2: Verbes au présent</p>
+         <p>Clique sur la bonne réponse</p>
+         <p>a.Paul _____ la table</p>
+           <div class="checkbox">
+              <input type="checkbox" name="conj2a" value="nettoie"/> <!-- code trouver sur : https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox-->
+              <label for="nettoie">nettoie</label>
+              <input type="checkbox" name="conj2a" value="nettoyer"/>
+              <label for="nettoyer">nettoyer</label>
+            </div>
+        <p>b.Lilou _____ avec son chien</p>
+           <div class="checkbox">
+              <input type="checkbox" name="conj2b" value="jouer"/> 
+              <label for="jouer">jouer</label>
+              <input type="checkbox" name="conj2b" value="joue"/>
+              <label for="joue">joue</label>
+            </div>
+        </div>   
+        <div class="Verifielesreponses">
+            <button id="checkanswerbtn_conjugaison" class="check-btn"> Vérifie les réponses</button> <!--- bouton pour verifier les reponses-->
+            <div id="results"></div> <!--zone pour afficher les resultats-->
+    </div> 
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html> <!-- indique aux navigateurs web que le document est une page web-->
+<html lang="fr"> <!-- langue française-->
+    <head> <!-- balise contenant les métadonnêes du site-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title> Plateforme de Révision des Fondamentaux - Niveau Primaire CM2 </title> <!--définit le texte affiché sur l'onglet du navigateur web lors de la visite de la page-->
+        <link rel="stylesheet" href="DM_PW.css"/>    
+        <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+        <script type="text/javascript" src="jquery-ui-1.14.1.js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="comprehension.js"></script>
+        <script type="text/javascript" src="DM_PW.js"></script>
+
+    </head>
+    <body> <!--contient le contenu visible de la page web-->
+        <header> <!--contient le contenu d'introduction ou de navigation-->
+            <img src="cm2image.jpg" alt="CM2">
+            <div class="center-text"> <!--div = definit une section dans un document html-->
+                 Le Français Niveau CM2 
+                <div class="center-text">
+                  Révisez vos connaissances en lexique, conjugaison, grammaire et encore plus!
+             </div>
+                <selection class="activities">
+                  <div class="activity-list"> <!--chaque bouton déclanche une action quand on clic dessus-->
+                      <button class="activity-btn" id="lexique"><a href="lexique.html">Lexique</a></button> 
+                     <button class="activity-btn" id="conjugaison"><a href="conjugaison.html">Conjugaison</a></button>
+                     <button class="activity-btn" id="grammaire"><a href="grammaire.html">Grammaire</a></button>
+                        <button class="activity-btn" id="orthographe"><a href="orthographe.html">Orthographe</a></button>
+                      <button class="activity-btn" id="comprehension"><a href="comprehension.html">Compréhension de texte</a></button>
+                     <button class="activity-btn" id="Bilan"><a href="Bilan.html">Bilan</a></button>
+                 </div>
+              </selection> 
+             <div class="back-home">  <!--click sur retour à la page mère (index)-->
+                 <a href="DM_PW.html">Retour à l'Accueil</a>
+             </div> 
+         </div>
+     </header>
+     <h2> Exercice de compréhension</h2>
+     <p> Lis le texte et repère les évènements principaux</p>
+     <figure>
+            <img src="tatapaulette.png" title="Lecture d'enfants" style="width:50%">
+            <figcaption>Récit d'enfants</figcaption>
+    </figure>
+     <div class="box" style="width:50%">
+       <p> Voici une liste d'évènements qui apparaissent dans le texte, range la dans un ordre chronologique :</p>
+            <ul id="sortable"> <!-- code non vu en cours et pris sur https://jqueryui.com/sortable/ -->
+             <li class="box-comp" value="comp1">1. On montre notre petit doigt; "c'est lui qui me l'a dit!"</li> 
+             <li class="box-comp" value="comp2">2. Et puis, elle sourit...</li>
+             <li class="box-comp" value="comp3">3. D'abord, elle frappe à la porte de notre chambre</li>
+             <li class="box-comp" value="comp4">4. On sent qu'ils s'embêtent, qu'ils sont gênés</li>
+             <li class="box-comp" value="comp5">5. C'est le jour où Tata Paulette vient</li>
+             <li class="box-comp" value="comp6">6. On a dû leur dire un jour qu'il fallait sourire aux enfants malades</li>
+             <li class="box-comp" value="comp7">7. trois petits coups, tout doux et puis la porte s'entrebâille</li>
+            </ul>
+     </div>
+	 
+ <div class="Verifielesreponses">
+            <button id="checkanswerbtn_comprehension" class="check-btn"> Vérifie les réponses</button> <!--- bouton pour verifier les reponses-->
+            <div id="results"></div> <!--zone pour afficher les resultats-->
+    </div> 	 
+	 
+	 
+    </body>
+</html>

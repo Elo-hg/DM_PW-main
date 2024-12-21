@@ -1,0 +1,57 @@
+<!DOCTYPE html> <!-- indique aux navigateurs web que le document est une page web-->
+<html lang="fr"> <!-- langue française-->
+    <head> <!-- balise contenant les métadonnêes du site-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title> Plateforme de Révision des Fondamentaux - Niveau Primaire CM2 </title> <!--définit le texte affiché sur l'onglet du navigateur web lors de la visite de la page-->
+        <link rel="stylesheet" href="DM_PW.css"/>    
+        <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+        <script type="text/javascript" src="DM_PW.js"></script>
+
+    </head>
+    <body> <!--contient le contenu visible de la page web-->
+        <header> <!--contient le contenu d'introduction ou de navigation-->
+            <img src="cm2image.jpg" alt="CM2">
+            <div class="center-text"> <!--div = definit une section dans un document html-->
+                 Le Français Niveau CM2 
+                <div class="center-text">
+                  Révisez vos connaissances en lexique, conjugaison, grammaire et encore plus!
+             </div>
+                <selection class="activities">
+                  <div class="activity-list"> <!--chaque bouton déclanche une action quand on clic dessus-->
+                      <button class="activity-btn" id="lexique"><a href="lexique.html">Lexique</a></button> 
+                     <button class="activity-btn" id="conjugaison"><a href="conjugaison.html">Conjugaison</a></button>
+                     <button class="activity-btn" id="grammaire"><a href="grammaire.html">Grammaire</a></button>
+                        <button class="activity-btn" id="orthographe"><a href="orthographe.html">Orthographe</a></button>
+                      <button class="activity-btn" id="comprehension"><a href="comprehension.html">Compréhension de texte</a></button>
+                     <button class="activity-btn" id="Bilan"><a href="Bilan.html">Bilan</a></button>
+                 </div>
+              </selection> 
+             <div class="back-home">  <!--click sur retour à la page mère (index)-->
+                 <a href="DM_PW.html">Retour à l'Accueil</a>
+             </div> 
+         </div>
+     </header>
+         <main> <!--représente le contenu prinicpal d'une page web-->
+            <h2>Exercice sonore par une dictée 
+                <p> Afin de tester ton orthographe, nous te proposons une dictée sonore. 
+                <p>Ecris ce que tu entends dans la boîte et pense à vérifier tes réponses quand tu auras fini </p>
+            </h2>
+            <selection >
+                <video width="50%" controls>
+                    <source src="Dictee.mp4" type="video/mp4">
+                     <p> ton navigateur ne prend pas en charge les vidéos HTML5.
+                        Voici <a href="Dictee.mp4"> un lien pour télécharger la vidéo</a>
+                     </p>
+                    </video>
+            </selection>
+            <selection>
+                <textarea id="dictee"  style="width: 50%; height: 10cm"></textarea>
+            </selection>
+         </main>
+         <div class="Verifielesreponses">
+                <button id="checkanswerbtn_orthographe" class="check-btn"> Vérifie les réponses</button> <!--- bouton pour verifier les reponses-->
+                <div id="results"></div> <!--zone pour afficher les resultats-->
+         </div>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html> <!-- indique aux navigateurs web que le document est une page web-->
+<html lang="fr"> <!-- langue française-->
+    <head> <!-- balise contenant les métadonnêes du site-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title> Plateforme de Révision des Fondamentaux - Niveau Primaire CM2 </title> <!--définit le texte affiché sur l'onglet du navigateur web lors de la visite de la page-->
+        <link rel="stylesheet" href="DM_PW.css"/>    
+        <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+        <script type="text/javascript" src="DM_PW.js"></script>
+       
+    </head>
+    <body> <!--contient le contenu visible de la page web-->
+         <header> <!--contient le contenu d'introduction ou de navigation-->
+              <img src="cm2image.jpg" alt="CM2">
+                <div class="center-text"> <!--div = definit une section dans un document html-->
+                 Le Français Niveau CM2 
+                <div class="center-text">
+                  Révisez vos connaissances en lexique, conjugaison, grammaire et encore plus!
+                </div>
+                    <selection class="activities">
+                     <div class="activity-list"> <!--chaque bouton déclanche une action quand on clic dessus-->
+                         <button class="activity-btn" id="lexique"><a href="lexique.html">Lexique</a></button> 
+                         <button class="activity-btn" id="conjugaison"><a href="conjugaison.html">Conjugaison</a></button>
+                         <button class="activity-btn" id="grammaire"><a href="grammaire.html">Grammaire</a></button>
+                         <button class="activity-btn" id="orthographe"><a href="orthographe.html">Orthographe</a></button>
+                         <button class="activity-btn" id="comprehension"><a href="comprehension.html">Compréhension de texte</a></button>
+                         <button class="activity-btn" id="Bilan"><a href="Bilan.html">Bilan</a></button>
+                      </div>
+                    </selection> 
+                <div class="back-home">  <!--click sur retour à la page mère (index)-->
+                 <a href="DM_PW.html">Retour à l'Accueil</a>
+                </div> 
+         </header>
+            <h2>Exercice de Lexique
+             <p> Afin de tester ton vocabulaire, selectionne les réponses qui correspondent : </p>
+            </h2>
+            <div class="box">
+                <p>Excercice 1 : La polysémie </p>
+                <p> Remplace le verbe de chaque par un des verbes proposés:</p>
+                <p> a. L'élève met son tablier :
+                    <select id="ex1a">
+                     <option value="disposer">disposer</option>
+                     <option value="enfiler">enfiler</option>
+                     <option value="suspendre">suspendre</option>
+                    </select>
+                         
+                </p>
+                <p>b. La directrice dirige l'école :
+                    <select id="ex1b">
+                     <option value="gerer"> gérer </option>
+                     <option value="guider"> guider </option>
+                     <option value="saisir "> saisir </option>
+                    </select>
+                </p>
+                <p>c. Les animaux perçoivent les ultrasons :
+                    <select id="ex1c">
+                     <option value="recevoir"> recevoir </option>
+                     <option value="entendre"> entendre </option>
+                     <option value="ecouter"> écouter </option>
+                    </select>
+                </p>
+            </div>
+            <div class="box">
+                <p>Exercice 2 : L'homonymie</p>
+                <p> Clique sur la bonne réponse </p>
+                <p>a. Il ne voit pas souvent le soleil, sa peau est _____ </p>
+				<input type="radio" name="ex2a" value="pale">pale 
+                <input type="radio" name="ex2a" value="pâle">pâle 
+                <p>b. La _____ de l'hélicoptère est abîmée. </p>
+                <input type="radio" name="ex2b" value="pale">pale 
+                <input type="radio" name="ex2b" value="pâle">pâle 
+            </div>
+            <div class="Verifielesreponses">
+                    <button id="checkanswerbtn_lexique" class="check-btn"> Vérifie les réponses</button> <!--- bouton pour verifier les reponses-->
+                    <div id="results"></div> <!--zone pour afficher les resultats-->
+            </div>
+    </body>
+</html>
